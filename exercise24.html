@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoe Cards Practice</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.main_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.image-box {
+  width: 100%;
+  height: 260px;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.image-box img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .image-box {
+  background-color: lightgreen;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  padding: 22px;
+}
+
+.category {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.description {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 21px;
+  font-weight: bold;
+  color: #111;
+}
+
+button {
+  border: none;
+  background-color: #111;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 900px) {
+  .main_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main_container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="main_container">
+    
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Urban Runner">
+      </div>
+      <div class="product-info">
+        <p class="category">RUNNING SHOES</p>
+        <h2>Urban Runner</h2>
+        <p class="description">Lightweight shoes designed for everyday comfort.</p>
+        <div class="bottom">
+          <span class="price">$129</span>
+          <button>View Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bdb812a8-ef71-4734-bfa2-488cae1dd607/W+NIKE+PEGASUS+PLUS+2.png" alt="Nike Pegasus Plus 2">
+      </div>
+      <div class="product-info">
+        <p class="category">Women's Road Running Shoes</p>
+        <h2>Nike Pegasus Plus 2</h2>
+        <p class="description">Exposed Air Zoom unit meets an ultralight design for next-level responsiveness.</p>
+        <div class="bottom">
+          <span class="price">$170</span>
+          <button>View Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/dc49b1ef-dc19-4edf-90dd-0e9b056321b3/W+NIKE+STRUCTURE+26.png" alt="Nike Structure 26">
+      </div>
+      <div class="product-info">
+        <p class="category">Women's Road Running Shoes</p>
+        <h2>Nike Structure 26</h2>
+        <p class="description">Full-length foam plus arch support equals our most steady ride.</p>
+        <div class="bottom">
+          <span class="price">$145</span>
+          <button>View Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b8a7dc9c-c29d-41b9-8ff3-9c62c9a80d22/W+ZOOM+FLY+6.png" alt="Nike Zoom Fly 6">
+      </div>
+      <div class="product-info">
+        <p class="category">Women's Road Racing Shoes</p>
+        <h2>Nike Zoom Fly 6</h2>
+        <p class="description">ZoomX foam plus a carbon fiber plate equals an energized ride.</p>
+        <div class="bottom">
+          <span class="price">$180</span>
+          <button>View Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/fdabaa69-b4c7-4ab2-b409-2d3d1f813e05/NIKE+HIGH+JUMP+ELITE.png" alt="Nike High Jump Elite">
+      </div>
+      <div class="product-info">
+        <p class="category">Track & Field Jumping Spikes</p>
+        <h2>Nike High Jump Elite</h2>
+        <p class="description">Lightweight shoes designed for everyday comfort.</p>
+        <div class="bottom">
+          <span class="price">$140</span>
+          <button>View Product</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
